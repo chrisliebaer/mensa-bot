@@ -1,0 +1,22 @@
+[package]
+name = "mensa-bot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tracing = "0.1"
+tracing-subscriber = "0.3"
+async-trait = "0.1"
+miette = { version = "5.8", features = ["fancy"] }
+thiserror = "1.0"
+backon = "0.4"
+
+envconfig = "0.10"
+chrono = { version = "0.4", features = ["serde"] }
+cron = "0.12"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.27", features = ["macros", "rt-multi-thread", "signal"] }
+tokio-util = "0.7"
+reqwest = { version = "0.11", default-features = false, features = ["rustls-tls", "json"] }
+
+serenity = { version = "0.11", default-features = false, features = ["builder", "client", "gateway", "model", "http", "rustls_backend", "unstable_discord_api"] }
